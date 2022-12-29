@@ -15,3 +15,16 @@ Output:
  []
 ]
 */
+
+const allSubsets = (arr) => {
+    const result = [];
+    const helper = (arr, subset = []) => {
+        if (!arr.length) return result.push(subset);
+        helper(arr.slice(1), [...subset, arr[0]]);
+        helper(arr.slice(1), [...subset]);
+    }
+    helper(arr);
+    return result;
+}
+
+console.log(allSubsets([1, 7, 4, 8]));
