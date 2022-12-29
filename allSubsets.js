@@ -27,4 +27,5 @@ const allSubsets = (arr) => {
     return result;
 }
 
-console.log(allSubsets([1, 7, 4, 8]));
+//TEST
+//console.log(allSubsets([1, 7, 4, 8]));
