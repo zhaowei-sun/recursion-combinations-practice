@@ -16,3 +16,16 @@ Example:
 ]
 The inner arrays must have ascending numbers, but can be provided in any order.
 */
+
+const partitionNumber = (num) => {
+  const result = [];
+  const helper = (num, subset=[]) => {
+    if (num === 0) return;
+    result.push([...subset, num])
+    helper(num-1, [...subset, 1]);
+  }
+  helper(num);
+  return result;
+}
+
+console.log(partitionNumber(4));
